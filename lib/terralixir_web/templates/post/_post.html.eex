@@ -1,0 +1,16 @@
+
+
+  <td class="py-4 whitespace-no-wrap border-t border-gray-200 text-sm leading-2 font-bold text-gray-900">
+    <%= @post.date%> 
+   </td>
+   <td class="px-6 py-4 whitespace-no-wrap border-t border-gray-200 text-sm leading-2 text-gray-900">
+     <%= link @post.title, to: Routes.post_path(@conn, :show, @post), class: "hover:text-orange-500" %>
+   </td>
+
+    <td class="px-6 py-4 whitespace-no-wrap border-t border-gray-200 text-sm leading-2 text-gray-400">
+        <%= @post.description %> &nbsp;
+    </td>
+          
+        
+      
+       

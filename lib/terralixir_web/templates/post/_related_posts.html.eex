@@ -1,0 +1,13 @@
+<%= unless Enum.empty? @posts do %>
+  <h2>Related Posts</h2>
+  <div class="row">
+    <%= for post <- @posts do %>
+    <div class="col-3 text-right text-muted">
+      <%= post.date %>
+    </div>
+    <div class="col-9">
+      <h4><%= link post.title, to: Routes.post_path(@conn, :show, post) %></h4>
+    </div>
+    <% end %>
+  </div>
+<% end %>

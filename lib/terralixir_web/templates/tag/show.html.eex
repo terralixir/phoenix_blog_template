@@ -1,0 +1,10 @@
+<h1><%= @page_title %></h1>
+
+<div class="container bg-white p-4 rounded">
+  <%= for post <- @posts do %>
+    <%= render TerralixirWeb.PostView, "_post.html", post: post, conn: @conn %>
+  <% end %>
+  <div class="mt-5">
+    <%= link "Back to Blog", to: Routes.post_path(@conn, :index) %>
+  </div>
+</div>
