@@ -20,7 +20,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## ❓ How to use
 
-  * Add your post with the followed format `/posts/{year}/{month}-{day}-{slug}.md`
+  * Add your post with the following format `/posts/{year}/{month}-{day}-{slug}.md`
   * Save your draft in the `/posts/draft/` folder. They will not be published.
 
   Example : 
