@@ -1,3 +1,3 @@
 defmodule TerralixirWeb.TagView do
-    use TerralixirWeb, :view
-  end
+  use TerralixirWeb, :view
+end

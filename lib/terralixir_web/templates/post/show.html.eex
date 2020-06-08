@@ -1,10 +1,6 @@
+<%= render "_head_show.html", post: @post, conn: @conn %>
 
-
-<%= render "_head_show.html", post: @post, conn: @conn %> 
-
-
-  
-  <div class="markdown-body">
-    <%= raw @post.body %>
-  </div>
-  <%= render "_related_posts.html", posts: @post.related_posts, conn: @conn %>
+<div class="markdown-body">
+  <%= raw @post.body %>
+</div>
+<%= render "_related_posts.html", posts: @post.related_posts, conn: @conn %>

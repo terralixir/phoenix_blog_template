@@ -1,4 +1,3 @@
 defmodule TerralixirWeb.ProjectView do
-    use TerralixirWeb, :view
-  end
-  
+  use TerralixirWeb, :view
+end

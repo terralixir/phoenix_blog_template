@@ -1,10 +1,25 @@
-<h1><%= @page_title %></h1>
-
-<div class="container bg-white p-4 rounded">
-  <%= for post <- @posts do %>
-    <%= render TerralixirWeb.PostView, "_post.html", post: post, conn: @conn %>
-  <% end %>
-  <div class="mt-5">
-    <%= link "Back to Blog", to: Routes.post_path(@conn, :index) %>
+<div class="mt-10">
+  <h2 class="mt-6 text-sm my-2 font-bold text-gray-900"> <%= @page_title %>  </h2>
+  <div class="flex flex-col">
+    <div class="-my-2 py-2 overflow-x-auto">
+      <div class="align-middle inline-block min-w-full overflow-hiddenborder-gray-200">
+        <table class="min-w-full">
+          <tbody>
+          <%= for post <- @posts do %>
+          <tr>
+            <%= render "_post.html", post: post, conn: @conn %>
+          </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
+
+
+<span class="mt-5 inline-flex rounded-md shadow-sm">
+  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
+    <%= link "Back to Blog", to: Routes.post_path(@conn, :index) %>
+  </button>
+</span>

@@ -34,3 +34,6 @@ npm-debug.log
 /priv/static/
 
 .clever.json
+
+.idea
+/terralixir.iml
